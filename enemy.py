@@ -17,4 +17,9 @@ class Enemy:
         window.blit(self.texture, (self.hitbox.x, self.hitbox.y))
 
     def movement(self):
-        pass
+        self.hitbox.x += self.speed
+        self.hitbox.y += self.speed
+        if self.hitbox.x > self.x2 and self.hitbox.y > self.y2:
+            self.speed *= -1
+        if self.hitbox.x < self.x1 and self.hitbox.y < self.y1:
+            self.speed *= -1
