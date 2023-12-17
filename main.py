@@ -48,6 +48,7 @@ while game:
     if pacman_Ghost.hitbox.colliderect(gold.hitbox):
         money_taunt.play()
         gold.hitbox.x = 1000000
+        game = False
 
     #рендер
     window.fill((0, 0, 0))
